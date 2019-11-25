@@ -13,5 +13,4 @@ resource "aws_route53_record" "test-import" {
   name    = "a"
   type    = "A"
   ttl     = "60"
-  records = ["${aws_eip.lb.public_ip}"]
 }
