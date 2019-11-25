@@ -1,6 +1,11 @@
-  
+
 provider "aws" {
   region = var.aws_region
+}
+
+terraform {
+  backend "s3" {}
+  required_version = ">= 0.12.0"
 }
 
 resource "aws_route53_record" "test-import" {
